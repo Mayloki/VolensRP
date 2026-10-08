@@ -57879,7 +57879,7 @@ stock PreloadAllAnimLibs(playerid)
    		return 1;
 }
 
-stock PreloadAnimLib(playerid, const animlib[])
+stock PreloadAnimLib(playerid, animlib[])
 {
    ApplyAnimation(playerid,animlib,"null",0.0,0,0,0,0,0);
    return 1;
@@ -57969,7 +57969,7 @@ stock Find_Magaz(playerid)
 	return 1;
 }
 //-------------------------------------------------------ProxDetector New
-stock ProxDetector(Float:radius = 30.0, playerid, const text[], col1 = 0xFFFFFFFF, col2 = 0xCCCCCCFF, col3 = 0x999999FF, col4 = 0x666666FF, col5 = 0x333333FF)
+stock ProxDetector(Float:radius = 30.0, playerid, text[], col1 = 0xFFFFFFFF, col2 = 0xCCCCCCFF, col3 = 0x999999FF, col4 = 0x666666FF, col5 = 0x333333FF)
 {
 	SetPlayerChatBubble(playerid, text, col1, radius, 10000);
 	new Float:x, Float:y, Float:z;
