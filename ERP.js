@@ -25672,6 +25672,26 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 		//
 		return 1;
 	}
+	{
+		TextDrawHideForPlayer(playerid,Box);
+		TextDrawHideForPlayer(playerid,Box2);
+		TextDrawHideForPlayer(playerid,Speed);
+		TextDrawHideForPlayer(playerid,SpeedShow[playerid]);
+		TextDrawHideForPlayer(playerid,Fuel);
+		TextDrawHideForPlayer(playerid,FuelShow[playerid]);
+		TextDrawHideForPlayer(playerid,Status);
+		TextDrawHideForPlayer(playerid,StatusShow[playerid]);
+		TextDrawHideForPlayer(playerid,StatusShow2[playerid]);
+		TextDrawHideForPlayer(playerid,Eng1[playerid]);
+		TextDrawHideForPlayer(playerid,Eng2[playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[0][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[1][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[2][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[3][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[4][playerid]);
+		TextDrawHideForPlayer(playerid,KMShow[playerid]);
+		TextDrawHideForPlayer(playerid,Fill[playerid]);
+	}
 	if(TransportDuty[playerid] == 1)
 	{
 		TaxiDrivers -= 1;
@@ -59804,6 +59824,27 @@ public UpdateSpeedometr(playerid)
 		}
 		TextDrawSetString(SpeedShow[playerid],str1);
 		TextDrawSetString(FuelShow[playerid],str2);
+	}
+	else
+	{
+		TextDrawHideForPlayer(playerid,Box);
+		TextDrawHideForPlayer(playerid,Box2);
+		TextDrawHideForPlayer(playerid,Speed);
+		TextDrawHideForPlayer(playerid,SpeedShow[playerid]);
+		TextDrawHideForPlayer(playerid,Fuel);
+		TextDrawHideForPlayer(playerid,FuelShow[playerid]);
+		TextDrawHideForPlayer(playerid,Status);
+		TextDrawHideForPlayer(playerid,StatusShow[playerid]);
+		TextDrawHideForPlayer(playerid,StatusShow2[playerid]);
+		TextDrawHideForPlayer(playerid,Eng1[playerid]);
+		TextDrawHideForPlayer(playerid,Eng2[playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[0][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[1][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[2][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[3][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[4][playerid]);
+		TextDrawHideForPlayer(playerid,KMShow[playerid]);
+		TextDrawHideForPlayer(playerid,Fill[playerid]);
 	}
 	return 1;
 }
