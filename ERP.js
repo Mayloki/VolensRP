@@ -25672,6 +25672,26 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 		//
 		return 1;
 	}
+	{
+		TextDrawHideForPlayer(playerid,Box);
+		TextDrawHideForPlayer(playerid,Box2);
+		TextDrawHideForPlayer(playerid,Speed);
+		TextDrawHideForPlayer(playerid,SpeedShow[playerid]);
+		TextDrawHideForPlayer(playerid,Fuel);
+		TextDrawHideForPlayer(playerid,FuelShow[playerid]);
+		TextDrawHideForPlayer(playerid,Status);
+		TextDrawHideForPlayer(playerid,StatusShow[playerid]);
+		TextDrawHideForPlayer(playerid,StatusShow2[playerid]);
+		TextDrawHideForPlayer(playerid,Eng1[playerid]);
+		TextDrawHideForPlayer(playerid,Eng2[playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[0][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[1][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[2][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[3][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[4][playerid]);
+		TextDrawHideForPlayer(playerid,KMShow[playerid]);
+		TextDrawHideForPlayer(playerid,Fill[playerid]);
+	}
 	if(TransportDuty[playerid] == 1)
 	{
 		TaxiDrivers -= 1;
@@ -57859,7 +57879,7 @@ stock PreloadAllAnimLibs(playerid)
    		return 1;
 }
 
-stock PreloadAnimLib(playerid, const animlib[])
+stock PreloadAnimLib(playerid, animlib[])
 {
    ApplyAnimation(playerid,animlib,"null",0.0,0,0,0,0,0);
    return 1;
@@ -57949,7 +57969,7 @@ stock Find_Magaz(playerid)
 	return 1;
 }
 //-------------------------------------------------------ProxDetector New
-stock ProxDetector(Float:radius = 30.0, playerid, const text[], col1 = 0xFFFFFFFF, col2 = 0xCCCCCCFF, col3 = 0x999999FF, col4 = 0x666666FF, col5 = 0x333333FF)
+stock ProxDetector(Float:radius = 30.0, playerid, text[], col1 = 0xFFFFFFFF, col2 = 0xCCCCCCFF, col3 = 0x999999FF, col4 = 0x666666FF, col5 = 0x333333FF)
 {
 	SetPlayerChatBubble(playerid, text, col1, radius, 10000);
 	new Float:x, Float:y, Float:z;
@@ -59804,6 +59824,27 @@ public UpdateSpeedometr(playerid)
 		}
 		TextDrawSetString(SpeedShow[playerid],str1);
 		TextDrawSetString(FuelShow[playerid],str2);
+	}
+	else
+	{
+		TextDrawHideForPlayer(playerid,Box);
+		TextDrawHideForPlayer(playerid,Box2);
+		TextDrawHideForPlayer(playerid,Speed);
+		TextDrawHideForPlayer(playerid,SpeedShow[playerid]);
+		TextDrawHideForPlayer(playerid,Fuel);
+		TextDrawHideForPlayer(playerid,FuelShow[playerid]);
+		TextDrawHideForPlayer(playerid,Status);
+		TextDrawHideForPlayer(playerid,StatusShow[playerid]);
+		TextDrawHideForPlayer(playerid,StatusShow2[playerid]);
+		TextDrawHideForPlayer(playerid,Eng1[playerid]);
+		TextDrawHideForPlayer(playerid,Eng2[playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[0][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[1][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[2][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[3][playerid]);
+		TextDrawHideForPlayer(playerid,TextDraw[4][playerid]);
+		TextDrawHideForPlayer(playerid,KMShow[playerid]);
+		TextDrawHideForPlayer(playerid,Fill[playerid]);
 	}
 	return 1;
 }
