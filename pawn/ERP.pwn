@@ -35715,8 +35715,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 						result[idx - offset] = EOS;
 						if(!strlen(result)) return SendClientMessage(playerid, COLOR_YELLOW, "[Инфо] > {FFFFFF}/hmute [ид] [время] [причина]");
 						new second=strval(tmp);
-						if(second <1 || second> 10000)return
-						SendClientMessage(playerid, COLOR_RED, "[Ошибка] > Hеверное значение!");
+						if(second <1 || second> 10000)return SendClientMessage(playerid, COLOR_RED, "[Ошибка] > Hеверное значение!");
 						GetPlayerName(playa, giveplayer, sizeof(giveplayer));
 						GetPlayerName(playerid, sendername, sizeof(sendername));
 						PlayerInfo[playa][pMuted]=1;
@@ -57881,7 +57880,7 @@ stock PreloadAllAnimLibs(playerid)
 
 stock PreloadAnimLib(playerid, const animlib[])
 {
-   ApplyAnimation(playerid,animlib,"null",0.0,0,0,0,0,0);
+   ApplyAnimation(playerid,{_:}animlib,"null",0.0,0,0,0,0,0);
    return 1;
 }
 //Ближний банкомат
@@ -57971,7 +57970,7 @@ stock Find_Magaz(playerid)
 //-------------------------------------------------------ProxDetector New
 stock ProxDetector(Float:radius = 30.0, playerid, const text[], col1 = 0xFFFFFFFF, col2 = 0xCCCCCCFF, col3 = 0x999999FF, col4 = 0x666666FF, col5 = 0x333333FF)
 {
-	SetPlayerChatBubble(playerid, text, col1, radius, 10000);
+	SetPlayerChatBubble(playerid,{_:}text, col1, radius, 10000);
 	new Float:x, Float:y, Float:z;
 	GetPlayerPos(playerid, x, y, z);
 	for(new i = GetMaxPlayers() - 1, Float:dist, virtualworld = GetPlayerVirtualWorld(playerid), interior = GetPlayerInterior(playerid); i != -1; i--)
